@@ -1,0 +1,21 @@
+---
+import MainMenu from './menus/MainMenu.astro';
+
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<header class:list={["px-4 py-4", className]}>
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+        <!-- You can add your logo here -->
+        <a href="/" class="font-semibold text-lg text-content no-underline cursor-pointer">
+            My Site
+        </a>
+        
+        <!-- Menu Area (Right Aligned) -->
+        <MainMenu />
+    </div>
+</header>
